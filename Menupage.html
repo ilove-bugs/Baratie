@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <style>
+      body {
+        font-family: "Inter", "Roboto", "Open Sans", "Helvetica", sans-serif;
+        background-color: #181818;
+      }
+:root{
+  --textcolor: white;
+}
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 5vh;
+        width: 88vw;
+    
+     
+        /* background-color: black; */
+        color: var(--textcolor);
+      
+        font-size: 0.9rem;
+      
+      }
+
+      .nav-brand {
+        display: flex;
+        align-items: center;
+      }
+      .site-name {
+        font-size: 1.7rem;
+        font-weight: bold;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 20px;
+        text-shadow: 5px 10px 4px grey;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+
+      .nav-links li {
+        padding: 10px;
+      }
+      .nav-links li:hover {
+        background-color: #303030;
+        border-radius: 50px;
+        transform: translateY(-5px);
+        transition: transform 0.3s ease 0.1s;
+      }
+      /* the main content */
+      main {
+        box-sizing: border-box;
+width: 100vw;
+        margin: 30px;
+
+        border-radius: 50px;
+  
+      }
+      /* for menu table */
+      .menu {
+        margin-top: 50px;
+        position: relative;
+        box-sizing: border-box;
+        display: grid;
+        width: 95%;
+        height: 60%;
+        grid-template-columns: repeat(5, 300px);
+        grid-template-rows: repeat(2, 250px);
+        align-items: center;
+        row-gap: 20px;
+
+        column-gap: 50px;
+        overflow: auto;
+        background-color: #303030;
+        border-radius: 50px;
+        border: 2px solid #ccc;
+        box-shadow: 0px 10px 50px grey;
+      }
+
+      /* for box inside menus */
+
+      .menu li {
+        background-color: white;
+        margin: 10px;
+        list-style: none;
+        height: 80%;
+        width: 90%;
+        border: 3px solid black;
+        position: relative;
+        display: flex;
+    
+        border-radius: 10px;
+        box-shadow: 10px 10px;
+      }
+      /* for food names */
+      .menu figcaption {
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0;
+        padding: 8px;
+        margin: 10px;
+        border: 2px solid grey;
+        font-size: 0.8rem;
+        font-weight: bolder;
+        border-radius: 100px;
+      }
+      /* for food's image */
+      .menu li img {
+        object-fit: cover;
+        object-position: 100% 70%;
+        width: 100%;
+        height: 75%;
+      }
+      .menu li .price {
+        position: absolute;
+        color: lightgreen;
+      }
+      .menu li .price:hover {
+        text-decoration: underline green;
+      }
+      .menu figcaption:hover {
+        background-color: #181818;
+        color: var(--textcolor);
+      }
+      .btn {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .btn button {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        color: var(--textcolor);
+        border: none;
+        background-color: #181818;
+        box-shadow: 0px 6px #585757;
+        border: 2px solid grey;
+        font-size: 1rem;
+      }
+      .btn button:active {
+        transform: scale(0.5);
+        transition: transform 0.9s linear;
+        box-shadow: none;
+      }
+      .btn h3 {
+        font-size: 2rem;
+        color: var(--textcolor);
+      }
+      footer {
+        /* border: 1px solid #ccc; */
+        height: 70px;
+        width: 80%;
+        position: relative;
+        top: 100px;
+        margin: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+      }
+      .icons img {
+        width: 40px;
+        margin: 10px;
+      }
+      .msg {
+        color: var(--textcolor);
+        font-size: 1.2rem;
+      }
+      .icons img:hover {
+        transform: scale(1.3);
+      }
+
+      /* for image beside of baratie */
+      .nav-brand img {
+        background-color: white;
+        width: 40px;
+        border-radius: 50%;
+        padding: 2px;
+        position: relative;
+        top: 4px;
+        left: 10px;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Libertinus+Keyboard&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-brand">
+        <img src="restaurant.png" alt="" />
+        <span class="site-name">Baratie</span>
+      </div>
+      <ul class="nav-links">
+        <li>Home</li>
+        <li>Contact</li>
+        <li>About</li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="menu">
+        <li>
+          <img src="burger.jpg" alt="" />
+          <figcaption>Burger</figcaption>
+
+          <span class="price">10.99$</span>
+        </li>
+        <li>
+          <img src="burger.jpg" alt="" />
+          <figcaption>Foodname</figcaption>
+          <span class="price">10.99$</span>
+        </li>
+        <li>
+          <img src="burger.jpg" alt="" />
+          <figcaption>Foodname</figcaption>
+          <span class="price">10.99$</span>
+        </li>
+        <li>
+          <img src="burger.jpg" alt="" />
+          <figcaption>Foodname</figcaption>
+          <span class="price">10.99$</span>
+        </li>
+        <li>
+          <img src="burger.jpg" alt="" />
+          <figcaption>Foodname</figcaption>
+          <span class="price">10.99$</span>
+        </li>
+        <li>
+          <img src="burger.jpg" alt="" />
+          <figcaption>Foodname</figcaption>
+          <span class="price">10.99$</span>
+        </li>
+        <li>
+          <img src="burger.jpg" alt="" />
+          <figcaption>Foodname</figcaption>
+          <span class="price">10.99$</span>
+        </li>
+        <li>
+          <img src="burger.jpg" alt="" />
+          <figcaption>Foodname</figcaption>
+          <span class="price">10.99$</span>
+        </li>
+        <li>
+          <img src="burger.jpg" alt="" />
+          <figcaption>Foodname</figcaption>
+          <span class="price">10.99$</span>
+        </li>
+        <li>
+          <img src="burger.jpg" alt="" />
+          <figcaption>Foodname</figcaption>
+          <span class="price">10.99$</span>
+        </li>
+      </div>
+    </main>
+    <div class="btn">
+      <h3>Press here!!!</h3>
+      <button>Order it!</button>
+    </div>
+
+    <footer>
+      <div class="icons">
+        <a href="https://www.facebook.com">
+          <img src="facebook.png" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/abhinavkhatree/">
+          <img src="instagram.png" alt="instagram" />
+        </a>
+        <a href="https://www.x.com">
+          <img src="twitter.png" alt="Twitter" />
+        </a>
+      </div>
+      <div class="msg">Connect with us on:</div>
+    </footer>
+
+  </body>
+</html>
